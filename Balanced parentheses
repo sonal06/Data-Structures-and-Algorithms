@@ -1,0 +1,22 @@
+#To check if the parentheses are balanced
+
+#Parenthese check:
+
+def paren(expression):
+    s = Stack()
+    balanced = True
+    i=0
+    while i <len(expression) and balanced:
+        if expression[i] == '(':
+            s.push(expression[i])
+        elif s.isEmpty():
+            balanced=False
+            return balanced
+        else:
+            s.pop()
+            
+        i= i+1
+    if s.isEmpty() and balanced:
+        return True
+    else: 
+        return False
