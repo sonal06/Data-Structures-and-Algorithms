@@ -32,6 +32,11 @@ def revstring(mystr):
         mystr1.append(mystack.pop())
         
     return "".join(map(str,mystr1))
+    
+    #method 2:
+    mystr2=''
+    while not mystack.isEmpty():
+        mystr2= mystr2 + mystack.pop()
 
 s='Sonallanos'
 revstring(s)
